@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="FaturalarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FiyatGuncellemeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GirisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="HizmetlerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MisafirIslemleriForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MusteriIslemleriForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PersonelIslemleriForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PersonelYakinIslemleriForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PersonelYonetimForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="RezervasyonYonetimForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="RezervasyonOlusturForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="RezervasyonSilForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

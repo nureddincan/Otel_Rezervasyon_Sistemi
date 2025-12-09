@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "VY8Lg/y2tkQ=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\NureddinCan\\Desktop\\Ders Notları\\2.Sınıf\\2.Sınıf 1.Dönem\\VTYS\\B231210041_G231210023_VTYS_PROJE\\Otel_Rezervasyon_Sistemi\\Otel_Rezervasyon_Sistemi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\NureddinCan\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.0\\microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512",
+    "C:\\Users\\NureddinCan\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\9.0.0\\microsoft.extensions.logging.abstractions.9.0.0.nupkg.sha512",
+    "C:\\Users\\NureddinCan\\.nuget\\packages\\npgsql\\10.0.0\\npgsql.10.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
