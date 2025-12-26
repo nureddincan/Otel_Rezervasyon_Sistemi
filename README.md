@@ -10,6 +10,7 @@ Bu proje, otellerin günlük operasyonlarını (rezervasyon, müşteri kaydı, p
 ## 🚀 Proje Hakkında
 
 **Otel Rezervasyon Sistemi**
+
 Ülkemiz, turistik, kültürel ve tarihi açıdan oldukça zengin bir yapıya sahiptir. Bu sayede ülkemizde bulunan oteller her yıl binlerce yabancı ve yerli turisti ağırlamaktadır. Bu durum, otellerin rezervasyon süreçlerini daha kolay ve verimli bir şekilde yönetebilecekleri bir sisteme duydukları ihtiyacı artırmaktadır.
 Bu ihtiyaç doğrultusunda geliştirilen bu sistem, otellerin müşterilerini pratik ve sorunsuz bir şekilde sisteme kaydetmelerine ve rezervasyon sürecinde yaşanabilecek olumsuz durumları en aza indirgelemelerine yardımcı olmayı hedefler.
 Ayrıca sistem; sadece müşteri ve rezervasyon işlemlerini değil, buna ek olarak **personelin kayıt, iletişim ve maaş süreçlerinin takibini** sağlayarak temel düzeyde bir personel yönetim işlevini de yerine getirmektedir.
@@ -62,7 +63,7 @@ Veritabanı, aşağıdaki 33 temel iş kuralına sadık kalınarak tasarlanmış
 
 </details>
 
-### 🗂️ İlişkisel Şema (Metinsel Gösterim)
+## 🗂️ İlişkisel Şema (Metinsel Gösterim)
 
 Projenin veritabanı tabloları, veri tipleri ve kısıtlamaları (constraints) aşağıdaki gibidir:
 
@@ -85,7 +86,7 @@ Hizmet(hizmetNo:smallint, hizmetAdi:varchar(20), hizmetFiyati:real)
 RezervasyonHizmet(rezervasyonID:int, hizmetNo:smallint)
 RezervasyonLog(logID: integer, silinenRezervasyonID: integer, musteriTC: string, musteriAd: string, musteriSoyad: string, musteriTel: string, musteriEmail: string, odaNo: integer, baslangicTarihi: date, bitisTarihi: date, silinmeTarihi: timestamp, islemiYapan: string)
 
-### 👤 Geliştirici
+## 👤 Geliştirici
 * **Ad Soyad:** Nureddin Can Erdeğer
 * **Öğrenci No:** B231210041
 
