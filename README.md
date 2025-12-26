@@ -69,7 +69,7 @@ Veritabanı, aşağıdaki 33 temel iş kuralına sadık kalınarak tasarlanmış
 
 Projenin veritabanı tabloları, veri tipleri ve kısıtlamaları (constraints) aşağıdaki gibidir:
 
-```text
+
 Oda(odaNo:smallint, kat:smallint, durum:boolean, odaTuruID:smallint)
 OdaTur(odaTurID:smallint, odaTurAdi: varchar(25), odaFiyati:real, odaKapasite:smallint, odaMetrekare: smallint)
 Kisi(kisiID:serial, kimlikNo: char(11), kisiAdi:varchar(40), kisiSoyadi:varchar(40), cinsiyet:char(1), kisiTuru:varchar(25))
@@ -86,7 +86,7 @@ MisafirRezervasyon(misafirID:int, rezervasyonID:int)
 Fatura(faturaNo:serial, faturaTarihi:date, faturaTutari:real, rezervasyonID:int)
 Hizmet(hizmetNo:smallint, hizmetAdi:varchar(20), hizmetFiyati:real)
 RezervasyonHizmet(rezervasyonID:int, hizmetNo:smallint)
-RezervasyonLog(logID: integer, silinenRezervasyonID: integer, musteriTC: char(11), musteriAd: varchar(40), musteriSoyad: varchar(40), musteriTel: char(11), musteriEmail: varchar(40), odaNo: integer, baslangicTarihi: date, bitisTarihi: date, silinmeTarihi: timestamp, islemiYapan: varchar(50))
+RezervasyonLog(logID: integer, silinenRezervasyonID: integer, musteriTC: char(11), musteriAd: varchar(40), musteriSoyad: varchar(40), musteriTel: char(11), musteriEmail: varchar(40), odaNo: integer, baslangicTarihi: date, bitisTarihi: date, silinmeTarihi: timestamp, islemiYapan: varchar(50)) 
 
 ---
 
