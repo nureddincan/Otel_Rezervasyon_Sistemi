@@ -13,7 +13,7 @@ Bu proje, otellerin günlük operasyonlarını (rezervasyon, müşteri kaydı, p
 
 Ülkemiz, turistik, kültürel ve tarihi açıdan oldukça zengin bir yapıya sahiptir. Bu sayede ülkemizde bulunan oteller her yıl binlerce yabancı ve yerli turisti ağırlamaktadır. Bu durum, otellerin rezervasyon süreçlerini daha kolay ve verimli bir şekilde yönetebilecekleri bir sisteme duydukları ihtiyacı artırmaktadır.
 
-Bu ihtiyaç doğrultusunda geliştirilen bu sistem, otellerin müşterilerini pratik ve sorunsuz bir şekilde sisteme kaydetmelerine ve rezervasyon sürecinde yaşanabilecek olumsuz durumları en aza indirgelemelerine yardımcı olmayı hedefler.
+Bu ihtiyaç doğrultusunda geliştirilen bu sistem, otellerin müşterilerini pratik ve sorunsuz bir şekilde sisteme kaydetmelerine ve rezervasyon sürecinde yaşanabilecek olumsuz durumları en aza indirmelerine yardımcı olmayı hedefler.
 
 Ayrıca sistem; sadece müşteri ve rezervasyon işlemlerini değil, buna ek olarak **personelin kayıt, iletişim ve maaş süreçlerinin takibini** sağlayarak temel düzeyde bir personel yönetim işlevini de yerine getirmektedir.
 
@@ -86,7 +86,7 @@ MisafirRezervasyon(misafirID:int, rezervasyonID:int)
 Fatura(faturaNo:serial, faturaTarihi:date, faturaTutari:real, rezervasyonID:int)
 Hizmet(hizmetNo:smallint, hizmetAdi:varchar(20), hizmetFiyati:real)
 RezervasyonHizmet(rezervasyonID:int, hizmetNo:smallint)
-RezervasyonLog(logID: integer, silinenRezervasyonID: integer, musteriTC: string, musteriAd: string, musteriSoyad: string, musteriTel: string, musteriEmail: string, odaNo: integer, baslangicTarihi: date, bitisTarihi: date, silinmeTarihi: timestamp, islemiYapan: string)
+RezervasyonLog(logID: integer, silinenRezervasyonID: integer, musteriTC: char(11), musteriAd: varchar(40), musteriSoyad: varchar(40), musteriTel: char(11), musteriEmail: varchar(40), odaNo: integer, baslangicTarihi: date, bitisTarihi: date, silinmeTarihi: timestamp, islemiYapan: varchar(50))
 
 ---
 
@@ -138,24 +138,24 @@ RezervasyonLog(logID: integer, silinenRezervasyonID: integer, musteriTC: string,
 
 Veritabanı tasarımında **Genelleme/Kalıtım (Inheritance)** yapısı kullanılmıştır.
 * **Ana Tablo:** 'Kisi'
-* **Türetilen Tablolar:** 'Personel', 'Musteri', 'Misafir', 'PersonelYakini2
+* **Türetilen Tablolar:** 'Personel', 'Musteri', 'Misafir', 'PersonelYakini'
 
 ### Kullanılan Saklı Yordamlar (Stored Procedures)
 Sistem içerisinde iş mantığını yöneten 7 adet temel prosedür bulunmaktadır:
-1.  **sp_FaturaOlustur**: Rezervasyon süresi ve hizmetleri hesaplayıp fatura keser.
-2.  **sp_GecmisRezervasyonlariPasifYap**: Tarihi geçen rezervasyonları otomatik pasife çeker.
-3.  **sp_PersonelMaasGuncelle**: Belirli bir pozisyondaki personellerin maaşını günceller.
-4.  **sp_OdaFiyatGuncelle**: Oda türlerinin fiyatlarını günceller.
-5.  **sp_GunlukCiro**: Belirtilen tarihteki toplam ciroyu hesaplar.
-6.  **sp_GunlukYeniRezervasyonSayisi**: Günlük yeni rezervasyon istatistiğini döndürür.
-7.  **sp_GunlukToplamMisafir**: Oteldeki anlık misafir sayısını (yanındakiler dahil) hesaplar.
+1. **sp_FaturaOlustur**: Rezervasyon süresi ve hizmetleri hesaplayıp fatura keser.
+2. **sp_GecmisRezervasyonlariPasifYap**: Tarihi geçen rezervasyonları otomatik pasife çeker.
+3. **sp_PersonelMaasGuncelle**: Belirli bir pozisyondaki personellerin maaşını günceller.
+4. **sp_OdaFiyatGuncelle**: Oda türlerinin fiyatlarını günceller.
+5. **sp_GunlukCiro**: Belirtilen tarihteki toplam ciroyu hesaplar.
+6. **sp_GunlukYeniRezervasyonSayisi**: Günlük yeni rezervasyon istatistiğini döndürür.
+7. **sp_GunlukToplamMisafir**: Oteldeki anlık misafir sayısını (yanındakiler dahil) hesaplar.
 
 ### Kullanılan Tetikleyiciler (Triggers)
 Veri tutarlılığı için 4 adet tetikleyici aktiftir:
-1.  **trg_RezervasyonSilinince**: Silinen kaydı Log tablosuna taşır.
-2.  **trg_TCKNUzunluk**: TC Kimlik numarasının 11 hane ve rakam olmasını zorunlu kılar.
-3.  **trg_OdaDurumOtomatik**: Rezervasyon eklenince/silinince oda durumunu (Dolu/Boş) günceller.
-4.  **trg_TarihKontrol`**: Geçmiş tarihe rezervasyon yapılmasını engeller.
+1. **trg_RezervasyonSilinince**: Silinen kaydı Log tablosuna taşır.
+2. **trg_TCKNUzunluk**: TC Kimlik numarasının 11 hane ve rakam olmasını zorunlu kılar.
+3. **trg_OdaDurumOtomatik**: Rezervasyon eklenince/silinince oda durumunu (Dolu/Boş) günceller.
+4. **trg_TarihKontrol**: Geçmiş tarihe rezervasyon yapılmasını engeller.
 
 ---
 
@@ -163,7 +163,7 @@ Veri tutarlılığı için 4 adet tetikleyici aktiftir:
 
 1.  Bu repoyu klonlayın:
     ```bash
-    git clone [https://github.com/nureddincan/Otel_Rezervasyon_Sistemi.git](https://github.com/nureddincan/Otel_Rezervasyon_Sistemi.git)
+    git clone https://github.com/nureddincan/Otel_Rezervasyon_Sistemi.git
     ```
 2.  PostgreSQL üzerinde yeni bir veritabanı oluşturun.
 3.  `OtelRezervasyonSistemi.sql` dosyasını bu veritabanına import edin (Restore).
