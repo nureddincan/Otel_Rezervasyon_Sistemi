@@ -89,11 +89,6 @@ RezervasyonHizmet(rezervasyonID:int, hizmetNo:smallint)
 RezervasyonLog(logID: integer, silinenRezervasyonID: integer, musteriTC: char(11), musteriAd: varchar(40), musteriSoyad: varchar(40), musteriTel: char(11), 
                     musteriEmail: varchar(40), odaNo: integer, baslangicTarihi: date, bitisTarihi: date, silinmeTarihi: timestamp, islemiYapan: varchar(50)) 
 ```
----
-
-## 👤 Geliştirici
-* **Ad Soyad:** Nureddin Can Erdeğer
-* **Öğrenci No:** B231210041
 
 ---
 
@@ -174,6 +169,71 @@ Veri tutarlılığı için 4 adet tetikleyici aktiftir:
 
 ---
 
+
+## Ekran Görüntüleri
+<img width="484" height="243" alt="image" src="https://github.com/user-attachments/assets/9667ca0d-fd1a-4bb2-a40f-102b738c76e3" />
+
+-----------
+<img width="367" height="243" alt="image" src="https://github.com/user-attachments/assets/5e09a88f-bcf1-40a2-872b-8900ecab2c56" />
+
+-----------
+<img width="367" height="243" alt="image" src="https://github.com/user-attachments/assets/97a4b4bb-2f1a-4bf3-be83-1fc8e15a9f0d" />
+
+-----------
+<img width="1604" height="847" alt="image" src="https://github.com/user-attachments/assets/2b1529d5-4378-46b8-a870-11d5ee4f6e7f" />
+
+-----------
+<img width="1604" height="841" alt="image" src="https://github.com/user-attachments/assets/7d5facab-ad5d-406e-a5ec-55756cbef149" />
+
+-----------
+<img width="1450" height="828" alt="image" src="https://github.com/user-attachments/assets/86a0616a-6564-4afd-8755-bc93b7eb8653" />
+
+-----------
+<img width="1450" height="828" alt="image" src="https://github.com/user-attachments/assets/d61c16f8-7c25-4f43-a95f-ffb2e776c089" />
+
+-----------
+<img width="1450" height="828" alt="image" src="https://github.com/user-attachments/assets/b98ff148-a5fb-4f4b-b767-0ecec51043e7" />
+
+-----------
+<img width="1450" height="828" alt="image" src="https://github.com/user-attachments/assets/6e11ed8b-794b-40dd-ae9f-88066921c88c" />
+
+-----------
+<img width="756" height="211" alt="image" src="https://github.com/user-attachments/assets/cfd61c30-0fdc-4659-890a-310f0533b912" />
+
+-----------
+<img width="301" height="343" alt="image" src="https://github.com/user-attachments/assets/cc9919cd-9901-47ec-b951-fafe0c507655" />
+
+-----------
+<img width="1659" height="767" alt="image" src="https://github.com/user-attachments/assets/7f135ed8-01e9-4f16-b18a-aa1d40c160df" />
+
+-----------
+<img width="1659" height="767" alt="image" src="https://github.com/user-attachments/assets/8b670a9a-6222-4d3f-b3a9-a370e512b85a" />
+
+-----------
+<img width="1604" height="741" alt="image" src="https://github.com/user-attachments/assets/7f76cf62-c426-4b41-a7d9-fd95ffb40299" />
+
+-----------
+<img width="1604" height="879" alt="image" src="https://github.com/user-attachments/assets/c19557c9-b36b-4c7b-b91a-36cc26cee746" />
+
+-----------
+<img width="1604" height="879" alt="image" src="https://github.com/user-attachments/assets/67337a9e-4c5c-4123-be46-4218ade4fbb4" />
+
+-----------
+<img width="1604" height="879" alt="image" src="https://github.com/user-attachments/assets/21547313-74c5-4ea5-b61a-b7f7d5ecf1a1" />
+
+-----------
+<img width="1604" height="879" alt="image" src="https://github.com/user-attachments/assets/64e76355-7f11-4042-a351-03fb4ca0dcbc" />
+
+-----------
+<img width="1604" height="880" alt="image" src="https://github.com/user-attachments/assets/565b2e97-03f7-4f61-88b5-3b2ddf06299d" />
+
+-----------
+<img width="1511" height="772" alt="image" src="https://github.com/user-attachments/assets/57ac3249-af05-48bb-ac2a-6439a25f009f" />
+
+-----------
+<img width="1508" height="767" alt="image" src="https://github.com/user-attachments/assets/5fd4f758-ea35-4e65-a8f9-a55ca23b0ddb" />
+
+-----------
 ## 📄 Lisans
 
 Bu proje Sakarya Üniversitesi BSM 211 dersi kapsamında hazırlanmıştır. Kaynak gösterilerek eğitim amaçlı kullanılabilir.
